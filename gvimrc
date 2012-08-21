@@ -3,5 +3,4 @@ if has("gui_macvim")
   map <D-t> :CommandT<CR>
 endif
 
-color macvim
 set gfn=Inconsolata:h14

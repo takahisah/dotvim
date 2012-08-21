@@ -4,12 +4,14 @@ filetype plugin indent on   " load file type plugins + indentation
 
 set nocompatible            " no compatibility with legacy vi
 syntax enable
+set background=dark
+colorscheme solarized
 set encoding=utf-8
 set showcmd                 " display incomplete commands
 
-set nowrap                      " don't wrap lines
+set wrap                        " wrap lines
 set tabstop=4
-set shiftwidth=4                " a tab is four spaces
+set shiftwidth=4                " a tab is two spaces
 set softtabstop=4
 set expandtab                   " use spaces, not tabs
 set scrolloff=3                 " friendly scrolling
@@ -27,7 +29,17 @@ set incsearch     " incremental searching
 set ignorecase    " searches are case insensitive..
 set smartcase     " unless they contain at least one capital letter
 
+"" vim-r-plugin setup
+let vimrplugin_term = "/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal"
+
+"" listen to mouse
+if has("mouse")
+    set mouse=a
+endif
+
 "" Mapping
 let mapleader=","
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 inoremap jj <ESC>
+
+let g:slime_target = "tmux"
