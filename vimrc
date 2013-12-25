@@ -4,8 +4,6 @@ filetype plugin indent on   " load file type plugins + indentation
 
 set nocompatible            " no compatibility with legacy vi
 syntax enable
-set background=dark
-colorscheme solarized
 set encoding=utf-8
 set showcmd                 " display incomplete commands
 
@@ -28,14 +26,6 @@ set hlsearch      " highlight matches
 set incsearch     " incremental searching
 set ignorecase    " searches are case insensitive..
 set smartcase     " unless they contain at least one capital letter
-
-"" vim-r-plugin setup
-let vimrplugin_term = "/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal"
-
-"" listen to mouse
-if has("mouse")
-    set mouse=a
-endif
 
 "" Mapping
 let mapleader=","
