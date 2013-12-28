@@ -8,9 +8,9 @@ set encoding=utf-8
 set showcmd                 " display incomplete commands
 
 set wrap                        " wrap lines
-set tabstop=4
-set shiftwidth=4                " a tab is two spaces
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2                " a tab is two spaces
+set softtabstop=2
 set expandtab                   " use spaces, not tabs
 set scrolloff=3                 " friendly scrolling
 set autoindent
@@ -30,6 +30,7 @@ set smartcase     " unless they contain at least one capital letter
 "" Mapping
 let mapleader=","
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>v :sp ~/.vim/vimrc<cr>
 inoremap jj <ESC>
 
 let g:slime_target = "tmux"
